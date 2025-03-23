@@ -13,7 +13,7 @@ let dy=10
 const canvas=document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
-let i=0;
+let i=0;    
 
 const img1 = new Image()
 img1.src ="./resource/nikuman.png"
@@ -31,8 +31,8 @@ img1.onload=()=>{
     if(!nikumanStart){
         ctx.drawImage(
             img4,
-            150,
-            150,
+            100,
+            100,
             300,
             300
         )
@@ -44,7 +44,7 @@ img1.onload=()=>{
 }
 
 //メイン処理リスナー
-window.addEventListener('click', throttle(clickEvent, 10000))
+window.addEventListener('touchend', throttle(clickEvent, 10000))
 
 //スロットリングからの呼び出し処理
 function clickEvent(){
@@ -58,8 +58,8 @@ function clickEvent(){
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         ctx.drawImage(
             img3,
-            150,
-            150,
+            100,
+            100,
             300,
             300
         )
