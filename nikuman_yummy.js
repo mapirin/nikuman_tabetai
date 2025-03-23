@@ -31,8 +31,8 @@ img1.onload=()=>{
     if(!nikumanStart){
         ctx.drawImage(
             img4,
-            100,
-            100,
+            70,
+            70,
             300,
             300
         )
@@ -58,8 +58,8 @@ function clickEvent(){
         ctx.clearRect(0, 0, canvas.width, canvas.height)
         ctx.drawImage(
             img3,
-            100,
-            100,
+            70,
+            70,
             300,
             300
         )
