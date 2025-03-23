@@ -1,7 +1,7 @@
-const CANVAS_SIZE_W=640
-const CANVAS_SIZE_HW=320
-const CANVAS_SIZE_H=480
-const CANVAS_SIZE_HH=240
+const CANVAS_SIZE_W=window.innerWidth
+const CANVAS_SIZE_HW=window.innerHeight
+const CANVAS_SIZE_H=window.innerWidth*(2/3)
+const CANVAS_SIZE_HH=window.innerHeight*(2/3)
 const CHARACTER_SIZE=50
 const CHARACTER_HSIZE=25
 let CHARACTER_POS_X=CANVAS_SIZE_HW-CHARACTER_HSIZE
@@ -44,7 +44,7 @@ img1.onload=()=>{
 }
 
 //メイン処理リスナー
-window.addEventListener('touchend', throttle(clickEvent, 10000))
+window.addEventListener('click', throttle(clickEvent, 10000))
 
 //スロットリングからの呼び出し処理
 function clickEvent(){
